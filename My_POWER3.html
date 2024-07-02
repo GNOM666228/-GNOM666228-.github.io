@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Саморазвитие</title>
+  <link rel="stylesheet" href="diiizayn.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Стили для логотипа */
+    .logo {
+      position: absolute;
+      top: 10px; /* Расположение вверху */
+      left: 50%; /* По центру */
+      transform: translateX(-50%); /* Центрирование */
+      width: 150px; /* Уменьшение размера */
+      height: auto;
+    }
+  </style>
+  
+  
+  
+  <style>
+    /* Стили для анимации */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    /* Применение анимации к тексту */
+    h2, p {
+      animation: fadeIn 2s ease forwards;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <!-- Навигационное меню -->
+  <nav>
+    <p><b>MY_POWER</b></p>
+    <button type="button" title="Главная">
+      <span>Главная</span>
+      <span class="material-icons">home</span>
+    </button>
+    <button type="button" title="Главная" onclick="location.href = 'My_POWER2.html'">
+      <span>Цены</span>
+      <span class="material-icons">attach_money</span>
+    </button>
+    <button type="button" title="О нас"onclick="location.href = 'My_POWER3.html'">
+      <span>О нас</span>
+      <span class="material-icons">info</span>
+    </button>
+    <button type="button" title="Контакты">
+      <span>Контакты</span>
+      <span class="material-icons">email</span>
+    </button>
+  </nav>
+
+  <!-- Заголовок -->
+  <div class="hero-section">
+    <div class="hero-text">
+      <h1>Мы - команда друзей-разработчиков,<br> увлеченных саморазвитием и созданием<br> инновационных решений для лучшей жизни.</h1>
+      <p>Предлагаем курсы и видео по саморазвитию,<br> охватывающие все сферы жизни:</p>
+      <ul>
+        <li>Личностный рост</li>
+        <li>Профессиональное развитие</li>
+        <li>Здоровый образ жизни</li>
+        <li>Творческое мышление</li>
+      </ul>
+
+    </div>
+    <div class="hero-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wkl0-sPcKUM?si=xV_KxYuOfWo9D6by" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
+  </div>
+  
+  <div class="about-section">
+    <div class="about-text">
+      <h2>У нас есть уникальный телеграм-бот по гормонам, который дает персонализированные советы для здоровья и благополучия.</h2>
+      <p>Мы верим в силу научного подхода к саморазвитию и постоянно исследуем новейшие открытия и методики.</p>
+      <p>My_Power - наш путь к высшему саморазвитию. Присоединяйтесь!</p>
+    </div>
+  </div>
+  
+  
+  
+
+
+  <!-- Изображение -->
+  <img src="photo3.jpg" alt="Фото" class="bottom-image">
+
+  <!-- Код для анимации кнопок -->
+  <script>
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        button.querySelector('span').classList.add('animated');
+      });
+      button.addEventListener('mouseleave', () => {
+        button.querySelector('span').classList.remove('animated');
+      });
+    });
+  </script>
+
+</body>
+</html>

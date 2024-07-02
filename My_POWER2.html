@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Саморазвитие</title>
+  <link rel="stylesheet" href="DIZAIN2.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Добавим стили для мобильных устройств */
+    @media (max-width: 768px) {
+      .title p {
+        font-size: 1.5rem; /* Уменьшим размер заголовка */
+      }
+      .container-fluid {
+        display: block; /* Изменяем структуру на блочную для мобильных устройств */
+      }
+      .col-sm-4 {
+        width: 100%; /* Ширина столбцов на мобильных устройствах */
+        margin-bottom: 20px; /* Добавим отступ между столбцами */
+      }
+      .card {
+        padding: 15px; /* Увеличим отступы внутри карточек */
+      }
+      .title h2 {
+        font-size: 1.2rem; /* Уменьшим размер заголовков карточек */
+      }
+      .price h4 {
+        font-size: 1rem; /* Уменьшим размер цен */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <p><b>My_Power</b></p>
+    
+    <button type="button" title="Главная" onclick="location.href = 'My_Power.html'">
+        <span>Главная</span>
+        <span class="material-icons">home</span>
+      </button>
+      
+    <button type="button" title="Цены">
+      <span>Цены</span>
+      <span class="material-icons">attach_money</span>
+    </button>
+    <button type="button" title="О нас"onclick="location.href = 'My_POWER3.html'">
+      <span>О нас</span>
+      <span class="material-icons">info</span>
+    </button>
+    <button type="button" title="Контакты">
+      <span>Контакты</span>
+      <span class="material-icons">email</span>
+    </button>
+  </nav>
+  <svg class="bottom-left" width="232" height="191" viewBox="0 0 232 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg>
+<svg class="top-right" width="219" height="147" viewBox="0 0 219 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect opacity="0.18" x="10.4252" y="75.8326" width="7.50168" height="7.50168" transform="rotate(110.283 10.4252 75.8326)" fill="#686868" stroke="white" stroke-width="1.22683" />
+  <rect opacity="0.18" x="180.869" y="138.825" width="7.50168" height="7.50168" transform="rotate(110.283 180.869 138.825)" fill="#686868" stroke="white" stroke-width="1.22683" />
+  <rect x="69.4713" y="-91.84" width="180.485" height="180.485" transform="rotate(20.2832 69.4713 -91.84)" stroke="white" stroke-opacity="0.1" stroke-width="1.22683" />
+</svg>
+<svg class="bottom-left" width="232" height="191" viewBox="0 0 232 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50.5685" cy="172.432" r="112.068" stroke="white" stroke-opacity="0.09" />
+  <g opacity="0.1">
+    <path d="M26.4932 5.20547L228.856 172.432" stroke="#D9D9D9" />
+    <rect x="22.4384" y="0.5" width="6.15753" height="6.15753" fill="#686868" stroke="white" />
+    <rect x="224.801" y="169.027" width="6.15753" height="6.15753" fill="#686868" stroke="white" />
+    <circle cx="121.819" cy="83.613" r="1.7774" fill="#323232" stroke="white" />
+  </g>
+</svg>
+<img src="photo1.jpg" alt="Фото" class="bottom-image">
+  
+  <div class="grid">
+    <svg class="grid-svg" xmlns="http://www.w3.org/2000/svg" width="900" height="786" viewBox="0 0 982 786" fill="none">
+    </svg>
+    <div class="blur"></div>
+  </div>
+
+  <div class="title">
+    <p>Цены</p>
+  </div>
+  
+  <div class="tables">
+    <!-- Таблица цен -->
+    <section>
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card text-center">
+                <div class="title">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                  <h2>Базовый</h2>
+                </div>
+                <div class="price">
+                  <h4><sup>₽</sup>0</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> Телеграм бот по гормонам </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                  <li> <i class="fa fa-times" aria-hidden="true"></i> </li>
+                  </ul>
+                </div>
+                <p><b>Уже куплено</b></p>
+              </div>
+            </div>
+            <!-- Конец первого столбца -->
+            <div class="col-sm-4">
+              <div class="card text-center">
+                <div class="title">
+                  <i class="fa fa-plane" aria-hidden="true"></i>
+                  <h2>Стандартный</h2>
+                </div>
+                <div class="price">
+                  <h4><sup>₽</sup>100/мес</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> Телеграм бот по гормонам </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> Телеграм бот PRO </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> </li>
+                  <li> <i class="fa fa-times" aria-hidden="true"></i>  </li>
+                  </ul>
+                </div>
+                <a href="#">Стать Сигмой </a>
+              </div>
+            </div>
+            <!-- Конец второго столбца -->
+            <div class="col-sm-4">
+              <div class="card text-center">
+                <div class="title">
+                  <i class="fa fa-rocket" aria-hidden="true"></i>
+                  <h2>Премиум</h2>
+                </div>
+                <div class="price">
+                  <h4><sup>₽</sup>1000/мес</h4>
+                </div>
+                <div class="option">
+                  <ul>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> Телеграм бот по гормонам </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> Телеграм бот PRO </li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i> Приватный телеграм канал</li>
+                  <li> <i class="fa fa-check" aria-hidden="true"></i>  </li>
+                  </ul>
+                </div>
+                <a href="#">Стать Альфой </a>
+              </div>
+            </div>
+            <!-- Конец третьего столбца -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

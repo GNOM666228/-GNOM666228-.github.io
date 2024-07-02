@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
+
+:root {
+  --text: hsl(0, 0%, 100%);
+  --textDim: hsl(0, 0%, 63%);
+  --background: hsl(0, 0%, 0%);
+  --primary: hsl(0, 97%, 41%);
+  --primaryBg: hsla(0, 100%, 50%, 0.01);
+  --primaryHi: hsla(46, 100%, 50%, 0.418);
+  --primaryFg: hsl(46, 81%, 75%);
+  --secondary: hsla(251, 100%, 50%, 0.733);
+  --secondaryFg: hsl(239, 82%, 85%);
+  --secondaryBg: hsla(236, 90%, 69%, 0.212);
+  --secondaryHi: hsla(241, 68%, 24%, 0.541);
+  --accent: hsl(0, 75%, 46%);
+  --accentBg: hsla(0, 100%, 50%, 0.123);
+  --accentHi: hsla(0, 100%, 50%, 0.25);
+  --imageX: 20px; /* Горизонтальная позиция фотографии */
+  --imageY: 20px; /* Вертикальная позиция фотографии */
+}
+
+body {
+  font-family: 'Manrope';
+  font-weight: 400;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  color: var(--textDim);
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.menu:hover {
+  color: var(--text);
+  cursor: pointer;
+}
+
+.sitename {
+  font-weight: bold;
+}
+
+.grid {
+  position: absolute;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  z-index: -1;
+}
+
+.grid-svg {
+  height: 80%;
+  width: 80%;
+  position: relative;
+  z-index: 1;
+}
+
+.blur {
+  height: 12rem;
+  width: 12rem;
+  background-color: var(--primary);
+  filter: blur(100px);
+  border-radius: 100px;
+  z-index: 0;
+  position: absolute;
+}
+
+.title {
+  font-size: 10rem;
+  font-weight: 700;
+  letter-spacing: -0.8rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
+  z-index: 1000;
+}
+
+.title > p {
+  margin: 0;
+  line-height: 10rem;
+  width: auto;
+}
+
+.title > p:nth-child(1) {
+  align-self: flex-start;
+}
+
+.title > p:nth-child(2) {
+  color: var(--primary);
+  align-self: flex-end;
+}
+
+.title > p:nth-child(3) {
+  align-self: flex-end;
+}
+
+.material-icons {
+  display: none;
+  fill: var(--text);
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  height: 50px;
+  width: 160px;
+  z-index: 9999;
+}
+
+.button button {
+  height: 50px;
+  width: 160px;
+  border: none;
+  border-radius: 13px;
+  background-color: var(--primaryBg);
+  box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+  color: var(--primaryFg);
+  font-family: "Manrope";
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateY(0px);
+  transition: all 0.2s ease;
+  clip-path: path("M 0 25 C 0 -5, -5 0, 80 0 S 160 -5, 160 25, 165 50 80 50, 0 55, 0 25");
+}
+
+.button span {
+  width: 100px;
+  height: 60px;
+  background-color: var(--primaryHi);
+  border-radius: 100%;
+  filter: blur(20px);
+  position: absolute;
+  bottom: -50%;
+  transition: all 0.2s ease;
+}
+
+.button:hover > button {
+  transform: translateY(5px);
+}
+
+.button:hover > span {
+  opacity: 60%;
+}
+
+.button.first {
+  top: 12%;
+  right: 20%;
+}
+
+.button.sec {
+  bottom: 13%;
+  right: 11%;
+}
+
+.button.sec > button {
+  background-color: var(--accentBg);
+  box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
+  color: var(--accentFg);
+}
+
+.button.sec > span {
+  background-color: var(--accentHi);
+}
+
+.button.third {
+  bottom: 25%;
+  left: 15%;
+}
+
+.button.third > button {
+  background-color: var(--secondaryBg);
+  box-shadow: 0px -3px 15px 0px var(--secondary) inset;
+  color: var(--secondaryFg);
+}
+
+.button.third > span {
+  background-color: var(--secondaryHi);
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 50%;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 50%;
+}
+
+nav {
+  --_clr-txt: rgb(255, 255, 255);
+  --_clr-txt-svg: rgb(147, 158, 184);
+  --_ani-speed: 6s;
+
+  display: flex;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+  text-transform: none;
+  line-height: normal;
+  overflow: visible;
+}
+
+nav > button {
+  position: relative;
+  display: grid;
+  place-content: center;
+  grid-template-areas: 'stack';
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+nav > button > span {
+  transition: all 300ms ease-in-out;
+  grid-area: stack;
+}
+
+nav > button > span:last-of-type {
+  margin-top: 0.25rem;
+  transform: scale(0);
+  transition-delay: 0ms;
+  border-radius: 50%;
+}
+
+nav > button:focus-visible > span:first-of-type,
+nav > button:hover > span:first-of-type {
+  transform: scale(0);
+}
+
+nav > button:focus-visible > span:last-of-type,
+nav > button:hover > span:last-of-type {
+  transform: scale(1);
+}
+
+nav > button > svg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  opacity: 0;
+  text-transform: uppercase;
+  transition: all 300ms ease-in-out;
+  color: var(--_clr-txt-svg);
+}
+
+nav > button:focus-visible > svg,
+nav > button:hover > svg {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-delay: 150ms;
+  transition: all 300ms ease-in-out;
+}
+
+button text {
+  transform-origin: center;
+  animation: rotate var(--_ani-speed) linear infinite;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Your mobile-specific styles here */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bottom-image {
+  position: fixed;
+  left: var(--imageX);
+  top: var(--imageY);
+  width: 1900px; /* Увеличиваем ширину фотографии */
+  height: auto; /* Автоматически регулируем высоту */
+  z-index: 999;
+  opacity: 0.3;
+}
+
+/* Анимация появления текста при наведении на кнопку */
+.button span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover > span {
+  opacity: 1;
+}
+
+body {
+  overflow-y: auto;
+}
+/* Существующие стили остаются без изменений */
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 5%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-button {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
+  .button {
+    width: 120px;
+    height: 40px;
+  }
+
+  .button button {
+    width: 120px;
+    height: 40px;
+    font-size: 0.875rem;
+  }
+
+  .title {
+    font-size: 5rem;
+    letter-spacing: -0.4rem;
+  }
+
+  .title > p {
+    line-height: 5rem;
+  }
+
+  .bottom-image {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
